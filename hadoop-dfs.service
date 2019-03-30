@@ -1,0 +1,12 @@
+[Unit]
+Description=Hadoop DFS Services
+
+
+[Service]
+User=hadoop
+ExecStart=/opt/hadoop/sbin/start-dfs.sh
+ExecStop=/opt/hadoop/sbin/stop-dfs.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
